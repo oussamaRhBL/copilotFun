@@ -1,28 +1,7 @@
-.landing-page {
-  text-align: center;
-  margin-top: 50px;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-.landing-page h1 {
-  font-size: 2.5em;
-  margin-bottom: 20px;
+.berger-color{
+color: rgb(202, 29, 52);
 }
-
-.landing-page p {
-  font-size: 1.2em;
-  margin-bottom: 30px;
-}
-
-.landing-page button {
-  padding: 10px 20px;
-  font-size: 1em;
-  cursor: pointer;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-}
-
-.landing-page button:hover {
-  background-color: #0056b3;
-}/* You can add global styles to this file, and also import other style files */
