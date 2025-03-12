@@ -1,6 +1,14 @@
-<button (click)="goHome()" class="return-button">Return to Home</button>
-
+<div class="navbar">
+  <button (click)="goHome()" class="return-button">Return to Home</button>
+  <button (click)="toggleForm()" class="plus-button">+</button>
+</div>
 <h1>Dashboard</h1>
+<form *ngIf="showForm" (ngSubmit)="addMemo()" #memoForm="ngForm" class="memo-form">
+  <input type="text" name="title" [(ngModel)]="newMemo.title" placeholder="Title" required>
+  <textarea name="content" [(ngModel)]="newMemo.content" placeholder="Content" required></textarea>
+  <button type="submit" [disabled]="!memoForm.form.valid">Add Memo</button>
+</form>
+
 <div cdkDropListGroup>
   <div class="example-container">
     <h2>To do</h2>

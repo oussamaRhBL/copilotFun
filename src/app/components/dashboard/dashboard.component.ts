@@ -10,15 +10,18 @@ import {
 import {MemoComponent, MemoModel} from '../memo/memo.component';
 import {NgForOf, NgIf} from '@angular/common';
 import {Router} from '@angular/router';
+import {FormsModule} from '@angular/forms';
 
 @Component({
   selector: 'app-dashboard',
   standalone: true,
-  imports: [MemoComponent, CdkDrag, NgForOf, CdkDropList, CdkDropListGroup, NgIf],
+  imports: [MemoComponent, CdkDrag, NgForOf, CdkDropList, CdkDropListGroup, NgIf, FormsModule],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.css'
 })
 export class DashboardComponent {
+  newMemo: Partial<MemoModel> = { title: '', content: '', state: 'todo' };
+  showForm: boolean = false;
   constructor(private router: Router) {}
   todoMemos: MemoModel[]= [
       { title: 'Memo 1', content: 'Content 1', date: '2025-03-12',color:'#ffb3ba',state:'todo' },
@@ -46,8 +49,23 @@ export class DashboardComponent {
       );
     }
   }
-
+  addMemo() {
+    if (this.newMemo.title && this.newMemo.content) {
+      const memo: MemoModel = {
+        title: this.newMemo.title,
+        content: this.newMemo.content,
+        date: new Date().toISOString(),
+        state: 'todo'
+      };
+      this.todoMemos.push(memo);
+      this.newMemo = { title: '', content: '', state: 'todo' };
+      this.showForm = false; // Hide the form after adding the memo
+    }
+  }
   goHome() {
     this.router.navigate(['/home']);
+  }
+  toggleForm() {
+    this.showForm = !this.showForm;
   }
 }
