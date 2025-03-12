@@ -14,4 +14,8 @@ export class HomeComponent {
   navigateToNotes() {
     this.router.navigate(['/notes']);
   }
+
+  navigateToDashboard() {
+    this.router.navigate(['/dashboard']);
+  }
 }
