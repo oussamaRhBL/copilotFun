@@ -1,36 +1,44 @@
 .memo-card {
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      overflow: hidden;
-      margin: 10px;
-      display: flex;
-      flex-direction: column;
-      transition: background-color 0.3s ease;
-      min-width: 200px; /* Adjust the width as needed */
-      min-height: 200px; /* Adjust the height as needed */
-    }
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    transition: background-color 0.3s ease;
+    min-width: 200px; /* Adjust the width as needed */
+    min-height: 200px; /* Adjust the height as needed */
+    position: relative; /* Add this line */
+  }
 
-    .memo-header {
-      color: black;
-      padding: 10px;
-      border-bottom: 1px solid #ccc;
-    }
+  .memo-header {
+    color: black;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    position: relative; /* Add this line */
+  }
 
-    .memo-header h3 {
-      margin: 0;
-      font-size: 1.2em;
-    }
+  .memo-header h3 {
+    margin: 0;
+  }
 
-    .memo-content {
-      padding: 10px;
-      flex-grow: 1;
-    }
+  .memo-header .icon {
+    position: absolute; /* Add this line */
+    top: 10px; /* Adjust as needed */
+    right: 10px; /* Adjust as needed */
+    font-size: 1.2em; /* Adjust the size as needed */
+  }
 
-    .memo-footer {
-      padding: 10px;
-      border-top: 1px solid #ccc;
-      text-align: right;
-      font-size: 0.9em;
-      color: #666;
-    }
+  .memo-content {
+    padding: 10px;
+    flex-grow: 1;
+  }
+
+  .memo-footer {
+    padding: 10px;
+    border-top: 1px solid #ccc;
+    text-align: right;
+    font-size: 0.9em;
+    color: #666;
+  }

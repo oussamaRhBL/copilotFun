@@ -1,6 +1,9 @@
 <div class="memo-card" [ngStyle]="{'background-color': memo?.color}">
   <div class="memo-header">
-    <h3>{{memo?.title}}</h3>
+    <h3>{{memo?.title}}
+      <span *ngIf="memo?.state === 'done'" class="icon">&#10003;</span> <!-- Checkmark icon for done state -->
+      <span *ngIf="memo?.state === 'todo'" class="icon">&#10007;</span> <!-- Cross icon for todo state -->
+    </h3>
   </div>
   <div class="memo-content">
     <p>{{memo?.content}}</p>

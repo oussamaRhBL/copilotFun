@@ -1,12 +1,13 @@
 import {Component, Input} from '@angular/core';
 import {CdkDrag} from '@angular/cdk/drag-drop';
-import {NgStyle} from '@angular/common';
+import {NgIf, NgStyle} from '@angular/common';
 
 export type MemoModel ={
   title: string;
   content: string;
   date: string;
   color?: string;
+  state: 'todo' | 'done';
 }
 
 @Component({
@@ -14,7 +15,8 @@ export type MemoModel ={
   standalone: true,
   imports: [
     CdkDrag,
-    NgStyle
+    NgStyle,
+    NgIf
   ],
   templateUrl: './memo.component.html',
   styleUrl: './memo.component.css'

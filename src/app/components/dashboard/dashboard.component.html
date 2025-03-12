@@ -3,6 +3,7 @@
     <h2>To do</h2>
     <div
       cdkDropList
+      id="todoList"
       [cdkDropListData]="todoMemos"
       class="example-list"
       (cdkDropListDropped)="drop($event)">
@@ -16,6 +17,7 @@
     <h2>Done</h2>
     <div
       cdkDropList
+      id="doneList"
       [cdkDropListData]="doneMemos"
       class="example-list"
       (cdkDropListDropped)="drop($event)">
