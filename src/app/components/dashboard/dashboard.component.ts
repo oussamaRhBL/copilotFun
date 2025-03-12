@@ -8,17 +8,18 @@ import {
   transferArrayItem
 } from '@angular/cdk/drag-drop';
 import {MemoComponent, MemoModel} from '../memo/memo.component';
-import {NgForOf} from '@angular/common';
+import {NgForOf, NgIf} from '@angular/common';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-dashboard',
   standalone: true,
-  imports: [MemoComponent, CdkDrag, NgForOf, CdkDropList, CdkDropListGroup],
+  imports: [MemoComponent, CdkDrag, NgForOf, CdkDropList, CdkDropListGroup, NgIf],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.css'
 })
 export class DashboardComponent {
-
+  constructor(private router: Router) {}
   todoMemos: MemoModel[]= [
       { title: 'Memo 1', content: 'Content 1', date: '2025-03-12',color:'#ffb3ba',state:'todo' },
       { title: 'Memo 2', content: 'Content 2', date: '2025-03-13' ,color:'#ffdfba',state:'todo'}
@@ -46,4 +47,7 @@ export class DashboardComponent {
     }
   }
 
+  goHome() {
+    this.router.navigate(['/home']);
+  }
 }

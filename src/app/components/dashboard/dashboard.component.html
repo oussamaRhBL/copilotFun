@@ -1,3 +1,6 @@
+<button (click)="goHome()" class="return-button">Return to Home</button>
+
+<h1>Dashboard</h1>
 <div cdkDropListGroup>
   <div class="example-container">
     <h2>To do</h2>
@@ -7,6 +10,7 @@
       [cdkDropListData]="todoMemos"
       class="example-list"
       (cdkDropListDropped)="drop($event)">
+      <div *ngIf="todoMemos.length === 0" class="empty-list-message">Drag your memo here</div>
       <div *ngFor="let item of todoMemos;trackBy: trackByFn" class="example-box" cdkDrag>
         <app-memo [memo]="item"></app-memo>
       </div>
@@ -21,8 +25,10 @@
       [cdkDropListData]="doneMemos"
       class="example-list"
       (cdkDropListDropped)="drop($event)">
+      <div *ngIf="doneMemos.length === 0" class="empty-list-message">Drag your memo here</div>
       <div *ngFor="let item of doneMemos;trackBy: trackByFn" class="example-box" cdkDrag>
         <app-memo [memo]="item"></app-memo>
     </div>
+
   </div>
 </div>
