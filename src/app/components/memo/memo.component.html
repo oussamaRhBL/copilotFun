@@ -1,5 +1,11 @@
-<div class="meno" cdkDrag>
-  <p>{{memoModel?.title}}</p>
-  <p>{{memoModel?.content}}</p>
-  <p>{{memoModel?.date}}</p>
+<div class="memo-card" [ngStyle]="{'background-color': memo?.color}">
+  <div class="memo-header">
+    <h3>{{memo?.title}}</h3>
+  </div>
+  <div class="memo-content">
+    <p>{{memo?.content}}</p>
+  </div>
+  <div class="memo-footer">
+    <p>{{memo?.date}}</p>
+  </div>
 </div>

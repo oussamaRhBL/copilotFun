@@ -1,3 +1,26 @@
-<div *ngFor="let memo of memoList" cdkDrag>
-  <app-memo [memoModel]="memo"></app-memo>
+<div cdkDropListGroup>
+  <div class="example-container">
+    <h2>To do</h2>
+    <div
+      cdkDropList
+      [cdkDropListData]="todoMemos"
+      class="example-list"
+      (cdkDropListDropped)="drop($event)">
+      <div *ngFor="let item of todoMemos;trackBy: trackByFn" class="example-box" cdkDrag>
+        <app-memo [memo]="item"></app-memo>
+      </div>
+    </div>
+  </div>
+
+  <div class="example-container">
+    <h2>Done</h2>
+    <div
+      cdkDropList
+      [cdkDropListData]="doneMemos"
+      class="example-list"
+      (cdkDropListDropped)="drop($event)">
+      <div *ngFor="let item of doneMemos;trackBy: trackByFn" class="example-box" cdkDrag>
+        <app-memo [memo]="item"></app-memo>
+    </div>
+  </div>
 </div>

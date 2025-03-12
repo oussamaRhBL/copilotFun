@@ -1,10 +1,36 @@
-.meno {
-  width: 200px;
-  height: 100px;
-  border: 1px solid #ccc;
-  background-color: #f9f9f9;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: move;
-}
+.memo-card {
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      margin: 10px;
+      display: flex;
+      flex-direction: column;
+      transition: background-color 0.3s ease;
+      min-width: 200px; /* Adjust the width as needed */
+      min-height: 200px; /* Adjust the height as needed */
+    }
+
+    .memo-header {
+      color: black;
+      padding: 10px;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .memo-header h3 {
+      margin: 0;
+      font-size: 1.2em;
+    }
+
+    .memo-content {
+      padding: 10px;
+      flex-grow: 1;
+    }
+
+    .memo-footer {
+      padding: 10px;
+      border-top: 1px solid #ccc;
+      text-align: right;
+      font-size: 0.9em;
+      color: #666;
+    }
