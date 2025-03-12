@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import {Router} from '@angular/router';
+import {Router, RouterModule} from '@angular/router';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [],
+  imports: [RouterModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
@@ -12,6 +12,7 @@ export class HomeComponent {
   constructor(private router: Router) {}
 
   navigateToNotes() {
+    console.log("clicked")
     this.router.navigate(['/notes']);
   }
 }
