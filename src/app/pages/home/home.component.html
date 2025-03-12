@@ -1,27 +1,17 @@
-<nav class="navbar">
-  <div class="navbar-brand">Copilot Experiment</div>
-  <ul class="navbar-nav">
-    <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
-    <li class="nav-item"><a href="#" class="nav-link">Notes</a></li>
-    <li class="nav-item"><a href="#" class="nav-link">About</a></li>
-  </ul>
-</nav>
+ <header-component></header-component>
+<div class="landing-page text-center p-8 max-w-2xl mx-auto">
+  <h1 class="text-3xl font-bold text-gray-900 mb-4">Some Note Application</h1>
 
-<div class="landing-page">
-  <h1>Some Note Application</h1>
-   <p class="hackathon-description">
-    Berger Levrault recently organized a hackathon focused on the integration of AI within the company.
-    The event brought together talented developers, data scientists, and AI enthusiasts to explore innovative
-    solutions that could enhance various aspects of the company's operations. Participants worked on projects
-    ranging from predictive analytics to intelligent automation, showcasing the potential of AI to drive
-    efficiency and innovation. The hackathon was a great success, fostering collaboration and creativity
-    among the teams. It highlighted the importance of AI in the future of Berger Levrault and set the stage
-    for further advancements in the field.
+  <p class="hackathon-description text-lg text-gray-700 leading-relaxed">
+    Berger Levrault recently organized a <span class="font-medium text-gray-900">hackathon</span> focused on the integration of AI within the company.
+    The event brought together talented developers, data scientists, and AI enthusiasts to explore innovative solutions that could enhance various aspects of the company's operations.
+    Participants worked on projects ranging from <span class="text-green-700 font-semibold">predictive analytics</span> to intelligent automation, showcasing the potential of AI to drive efficiency and innovation.
+    The hackathon was a great success, fostering <span class="italic">collaboration</span> and <span class="underline">creativity</span> among the teams.
   </p>
-  <button class="btn-levrault" (click)="navigateToNotes()">Commencer</button>
-  <button (click)="navigateToDashboard()">Go to Dashboard</button>
+
+  <button class="btn-levrault mt-6 bg-green-600 text-white px-6 py-2 rounded-lg shadow hover:bg-green-700 transition" (click)="navigateToNotes()">
+    🚀 Commencer
+  </button>
 </div>
 
-<footer class="footer">
-  <p>&copy; 2025 Note App. All rights reserved.</p>
-</footer>
+

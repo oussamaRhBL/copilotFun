@@ -1,1 +1,17 @@
-<p>note-app works!</p>
+<div class="bg-green-400 p-6 rounded-2xl shadow-lg w-72 text-black">
+  <p class="text-sm uppercase font-medium opacity-75">{{ firstTitle }}</p>
+  <h2 class="text-xl font-bold mt-1">{{secondTitle}}</h2>
+  <p class="text-sm opacity-80 mt-2">
+ {{decription}}
+  </p>
+  <hr class="border-t border-black opacity-20 my-4">
+  <div class="flex items-center justify-between">
+    <div>
+      <p class="text-xs opacity-75">{{timeToDo}}</p>
+      <p class="text-xl font-bold">{{percent}}</p>
+    </div>
+    <button class="bg-black text-white rounded-full p-2">
+      ➜
+    </button>
+  </div>
+</div>
