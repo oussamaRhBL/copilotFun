@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {CdkDragDrop, moveItemInArray} from '@angular/cdk/drag-drop';
 
 @Component({
   selector: 'app-dashboard',
@@ -10,8 +11,8 @@ import { Component } from '@angular/core';
 export class DashboardComponent {
   menoList = [1, 2, 3, 4, 5];
 
- /* drop(event: CdkDragDrop<number[]>) {
+  drop(event: CdkDragDrop<number[]>) {
     moveItemInArray(this.menoList, event.previousIndex, event.currentIndex);
   }
-}*/
+
 }
