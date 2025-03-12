@@ -11,5 +11,4 @@ export const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
   { path: 'memo', component: MemoComponent },
 
-
 ];
