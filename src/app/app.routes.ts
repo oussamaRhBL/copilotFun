@@ -10,5 +10,4 @@ export const routes: Routes = [
   { path: 'notes', component: NoteListComponent },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'memo', component: MemoComponent },
-
 ];
