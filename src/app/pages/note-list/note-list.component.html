@@ -10,7 +10,7 @@
            #todoList="cdkDropList"
            class="space-y-3 min-h-[100px] border-2 border-dashed border-gray-300 rounded-lg p-2">
         <note-component *ngFor="let note of todo" class="block p-3 bg-gray-100 rounded-lg shadow-md hover:bg-gray-200 transition"
-                        [secondTitle]="'First Note'" [description]="note.content" cdkDrag></note-component>
+                        [percent]="'0%'"         [secondTitle]="'First Note'" [description]="note.content" cdkDrag></note-component>
       </div>
     </div>
 
@@ -22,7 +22,7 @@
            #inProgressList="cdkDropList"
            class="space-y-3 min-h-[100px] border-2 border-dashed border-yellow-400 rounded-lg p-2">
         <note-component *ngFor="let note of inProgress" class="block p-3 bg-yellow-100 rounded-lg shadow-md hover:bg-yellow-200 transition"
-                        [secondTitle]="'Second Note'" [description]="note.content" cdkDrag></note-component>
+                        [percent]="'50%'"           [secondTitle]="'Second Note'" [description]="note.content" cdkDrag></note-component>
       </div>
     </div>
 
@@ -34,7 +34,9 @@
            #doneList="cdkDropList"
            class="space-y-3 min-h-[100px] border-2 border-dashed border-green-400 rounded-lg p-2">
         <note-component *ngFor="let note of done" class="block p-3 bg-green-100 rounded-lg shadow-md hover:bg-green-200 transition"
-                        [secondTitle]="'Third Note'" [description]="note.content" cdkDrag></note-component>
+                        [secondTitle]="'Third Note'" [description]="note.content" cdkDrag
+        [percent]="'100%'"
+        ></note-component>
       </div>
     </div>
   </div>
