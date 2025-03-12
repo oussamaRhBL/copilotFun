@@ -1,8 +1,58 @@
-.landing-page {
-  text-align: center;
-  margin-top: 50px;
+/* Navbar styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: rgb(202, 29, 52);
+  color: white;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+}
+.btn-levrault{
+  background:  rgb(202, 29, 52);
+}
+.navbar-brand {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-left: 40px;
 }
 
+.navbar-nav {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+.nav-item {
+  display: inline;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-size: 1em;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+
+}
+
+/* Landing page styles */
+.landing-page {
+  text-align: center;
+  margin-top: 150px;
+}
+.landing-page .hackathon-description {
+  font-size: 1.1em;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  text-align: justify;
+  margin: 40px;
+}
 .landing-page h1 {
   font-size: 2.5em;
   margin-bottom: 20px;
@@ -17,7 +67,7 @@
   padding: 10px 20px;
   font-size: 1em;
   cursor: pointer;
-  background-color: #007bff;
+  background-color:rgb(202, 29, 52);
   color: white;
   border: none;
   border-radius: 5px;
@@ -25,4 +75,15 @@
 
 .landing-page button:hover {
   background-color: #0056b3;
+}
+
+/* Footer styles */
+.footer {
+  background-color: rgb(202, 29, 52);
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
 }

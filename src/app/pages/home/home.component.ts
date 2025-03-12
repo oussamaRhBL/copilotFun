@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {Router,RouterModule} from '@angular/router';
+import {Router, RouterModule} from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -12,6 +12,7 @@ export class HomeComponent {
   constructor(private router: Router) {}
 
   navigateToNotes() {
+    console.log("clicked")
     this.router.navigate(['/notes']);
   }
 
