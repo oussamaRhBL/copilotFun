@@ -55,10 +55,11 @@ export class DashboardComponent {
         title: this.newMemo.title,
         content: this.newMemo.content,
         date: new Date().toISOString(),
-        state: 'todo'
+        state: 'todo',
+        color: this.newMemo.color || '#ffffff'
       };
       this.todoMemos.push(memo);
-      this.newMemo = { title: '', content: '', state: 'todo' };
+      this.newMemo = { title: '', content: '', state: 'todo',color:'' };
       this.showForm = false; // Hide the form after adding the memo
     }
   }

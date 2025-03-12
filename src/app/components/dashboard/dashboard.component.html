@@ -6,6 +6,7 @@
 <form *ngIf="showForm" (ngSubmit)="addMemo()" #memoForm="ngForm" class="memo-form">
   <input type="text" name="title" [(ngModel)]="newMemo.title" placeholder="Title" required>
   <textarea name="content" [(ngModel)]="newMemo.content" placeholder="Content" required></textarea>
+  <input type="color" name="color" [(ngModel)]="newMemo.color" placeholder="Color">
   <button type="submit" [disabled]="!memoForm.form.valid">Add Memo</button>
 </form>
 

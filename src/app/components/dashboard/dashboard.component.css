@@ -103,6 +103,7 @@
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
+
 .return-button:hover {
   background-color: #0056b3;
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
@@ -147,4 +148,12 @@
 .memo-form button:disabled {
   background-color: #ccc;
   cursor: not-allowed;
+}
+.memo-form input[type="color"] {
+  margin-bottom: 10px;
+  padding: 5px;
+  height: 40px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
 }
