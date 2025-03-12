@@ -13,7 +13,7 @@ export class NoteAppComponent {
 
   @Input()  firstTitle = 'First Note';
   @Input()  secondTitle = 'Second Note';
-  @Input() decription= 'This is a description of the note';
+  @Input() description= 'This is a description of the note';
   @Input()  timeToDo= '2021-09-01';
   @Input()   percent= '0.5%';
 }

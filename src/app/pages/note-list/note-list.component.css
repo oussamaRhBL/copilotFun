@@ -1,0 +1,20 @@
+.list {
+  border: 1px solid #ccc;
+  min-height: 200px;
+  padding: 10px;
+  background-color: #f9f9f9;
+}
+
+.cdk-drag-preview {
+  border: 1px solid #ccc;
+  background-color: white;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.cdk-drag-placeholder {
+  opacity: 0;
+}
+
+.cdk-drag-animating {
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
